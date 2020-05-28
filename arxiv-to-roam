@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIRECTORY="/home/robert/code/arxiv_roam/"
+VE_NAME=".roam-ve"
+
+cd "$DIRECTORY"
+source "$VE_NAME/bin/activate"
+
+python generate_page.py
