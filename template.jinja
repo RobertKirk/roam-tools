@@ -1,0 +1,12 @@
+- [paper link here]({{ url }})
+  - {{ '{{' }}pdf: {{ pdf_url }}{{ '}}' }}
+- paper-authors::{% for author in authors %} [[{{ author }}]],{% endfor %}
+- paper-institutions::
+- paper-abstract:: {{ abs }}
+- paper-published:: [[{{ published }}]]
+- Tags:: #Paper{% for tag in tags %} #[[{{tag}}]]{% endfor %}
+
+# Notes
+{% for note in notes %}
+- {{ note }}
+{% endfor %}
