@@ -34,7 +34,7 @@ def create_page_dict(arxiv_id, arxiv_url):
 
 def write_page(page_dict, template):
     page_output = template.render(**page_dict)
-    with open(f"output/Paper: {page_dict['title']}.md", "w") as file_:
+    with open(f"ignore/output/Paper: {page_dict['title']}.md", "w") as file_:
         file_.write(page_output)
     return page_output
 
