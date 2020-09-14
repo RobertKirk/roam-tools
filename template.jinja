@@ -1,12 +1,14 @@
-- [paper link here]({{ url }})
-  - {{ '{{' }}pdf: {{ pdf_url }}{{ '}}' }}
-- paper-authors::{% for author in authors %} [[{{ author }}]],{% endfor %}
-- paper-institutions::
-- paper-abstract:: {{ abs }}
-- paper-published:: [[{{ published }}]]
-- Tags:: #Paper{% for tag in tags %} #[[{{tag}}]]{% endfor %}
-
+[paper link here]({{ url }})
+  #make:wide-xx #make:long-xxl {{ '{{' }}pdf: {{ pdf_url }}{{ '}}' }}
+paper-authors::{% for author in authors %} [[{{ author }}]],{% endfor %}
+paper-institutions::
+paper-abstract:: {{ abs }}
+paper-published:: [[{{ published }}]]
+Tags:: #Paper{% for tag in tags %} #[[{{tag}}]]{% endfor %}
+{{[[TODO]]}} Add to relevant [[Head Pages]]
+# Summary
 # Notes
 {% for note in notes %}
-- {{ note }}
+  {{ note }}
 {% endfor %}
+# Critique
