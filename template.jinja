@@ -3,9 +3,9 @@
 paper-authors::{% for author in authors %} [[{{ author }}]],{% endfor %}
 paper-institutions::
 paper-abstract:: {{ abs }}
-paper-published:: [[{{ published }}]]
+paper-published:: [[[[{{ published_year }}]]-{{ published_month }}]]
 Tags:: #Paper{% for tag in tags %} #[[{{tag}}]]{% endfor %}
-{{[[TODO]]}} Add to relevant [[Head Pages]]
+{{ "{{[[TODO]]}}" }} Add to relevant [[Head Pages]]
 # Summary
 # Notes
 {% for note in notes %}

@@ -25,7 +25,8 @@ def create_page_dict(arxiv_id, arxiv_url):
         url=f"https://arxiv.org/abs/{arxiv_id}",
         pdf_url=f"https://arxiv.org/pdf/{arxiv_id}.pdf",
         authors=arxiv_obj["authors"],
-        published=arxiv_obj["published"][:7],
+        published_year=arxiv_obj["published"][:4],
+        published_month=arxiv_obj["published"][5:7],
         abs=arxiv_obj["summary_detail"]["value"].replace("\n", " "),
         title=arxiv_obj["title"].replace("\n", " ").replace("  ", " ").replace("  ", " "),
     )
