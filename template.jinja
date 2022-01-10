@@ -1,11 +1,10 @@
 [paper link here]({{ url }})
-  #make:wide-xx #make:long-xxl {{ '{{' }}pdf: {{ pdf_url }}{{ '}}' }}
 paper-authors::{% for author in authors %} [[{{ author }}]],{% endfor %}
 paper-institutions::
 paper-abstract:: {{ abs }}
 paper-published:: [[[[{{ published_year }}]]-{{ published_month }}]]
 Tags:: #Paper{% for tag in tags %} #[[{{tag}}]]{% endfor %}
-{{ "{{[[TODO]]}}" }} Add to relevant [[Head Pages]]
+{{ "{{[[TODO]]}}" }} Consider summarising for [[Alignment Newsletter]]?
 # Summary
 # Notes
 {% for note in notes %}
