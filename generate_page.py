@@ -9,7 +9,7 @@ import pyperclip
 from jinja2 import Template
 
 
-ARXIV_ID_REGEX = re.compile(r"https:\/\/arxiv.org/((abs)|(pdf))/(\d{3,5}\.\d{3,5})(\.pdf)?")
+ARXIV_ID_REGEX = re.compile(r"https:\/\/(ar5iv\.labs\.)?arxiv.org\/((abs)|(pdf)|(html))\/(\d{3,5}\.\d{3,5})(\.pdf)?")
 
 OPENREVIEW_ID_REGEX = re.compile(r"https:\/\/openreview.net/((forum)|(pdf))\?id\=(\w*)")
 
@@ -22,7 +22,7 @@ def get_template():
 
 def arxiv_create_page_dict(arxiv_id, arxiv_url):
     if arxiv_id is None and arxiv_url is not None:
-        arxiv_id = ARXIV_ID_REGEX.match(arxiv_url).groups()[3]
+        arxiv_id = ARXIV_ID_REGEX.match(arxiv_url).groups()[5]
     response = arxiv.query(id_list=[str(arxiv_id)])
     arxiv_obj = response[0]
     page_dict = dict(
